@@ -13,6 +13,4 @@ public class StudentRoom3 extends Room{
 		this.shortDescription = shortDescription;
 		this.longDescription = longDescription;
 	}	
-
-	
 }

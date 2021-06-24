@@ -42,6 +42,7 @@ public class RoomManager {
 		ArrayList<Room> livingRoomExits = new ArrayList<Room>();
 		livingRoomExits.add(bathroom);
 		livingRoomExits.add(studentRoom3);
+		livingRoomExits.add(kitchen);
 		livingRoom.setExits(livingRoomExits);
 		
 

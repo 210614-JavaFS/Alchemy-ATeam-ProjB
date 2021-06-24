@@ -20,7 +20,7 @@ public class Main {
 	}
 
 	private static void printRoom(Player player) {
-		System.out.println(player.getCurrentRoom().toString());
+		System.out.println("\nCurrent Room: "+player.getCurrentRoom().getName()+ "\n");
 	}
 
 	private static String[] collectInput() {
@@ -33,9 +33,18 @@ public class Main {
 	private static void parse(String[] command, Player player) {
 
 		// Command for the moment must be wrote like "go roomName"
+		//System.out.println("hey");
+		//System.out.println(command[0]);
 		switch (command[0]) {
 		case "go":
+			//System.out.println("hello");
 			player.setCurrentRoom(player.getCurrentRoom().getExit(command[1]));
+			System.out.println("\nList of Exits:");
+			for(int j = 0; j<player.getCurrentRoom().getExits().size(); j++)
+			{
+				System.out.println(player.getCurrentRoom().getExits().get(j).getName());
+			}
+			
 		}
 
 	}

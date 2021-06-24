@@ -29,15 +29,15 @@ public class Main {
 	}
 
 	private static void printRoom(Player player) {
-
-		System.out.println(player.getCurrentRoom().getName());
+		
+		System.out.println("\nCurrent Room: "+player.getCurrentRoom().getName()+ "\n");
 		System.out.println();
 		System.out.println(player.getCurrentRoom().getLongDescription());
 		System.out.println();
 		System.out.println(player.getCurrentRoom().getShortDescription());
 		System.out.println();
 
-		System.out.println("\nCurrent Room: "+player.getCurrentRoom().getName()+ "\n");
+
 
 	}
 
@@ -58,9 +58,15 @@ public class Main {
 		case "go":
 			//System.out.println("hello");
 			player.setCurrentRoom(player.getCurrentRoom().getExit(command[1]));
+			System.out.println("\nList of Exits:");
+			for(int j = 0; j<player.getCurrentRoom().getExits().size(); j++)
+			{
+				System.out.println(player.getCurrentRoom().getExits().get(j).getName());
+			}
+			break;
 		case "Interact":
 			player.getCurrentRoom().getName().equals("Livingroom");
-				
+			break;
 		case "Clock":
 			
 				Clock clock=new Clock();
@@ -85,11 +91,7 @@ public class Main {
 			System.out.println();
 			
 
-			System.out.println("\nList of Exits:");
-			for(int j = 0; j<player.getCurrentRoom().getExits().size(); j++)
-			{
-				System.out.println(player.getCurrentRoom().getExits().get(j).getName());
-			}
+
 
 			
 		}

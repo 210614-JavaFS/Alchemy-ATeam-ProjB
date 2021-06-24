@@ -85,6 +85,6 @@ public class RoomManager {
 
 
 		startingRoom = livingRoom1;
->>>>>>> d2370fc942404828cd739f72bf5e7ae30289fd52
+
 	}
 }

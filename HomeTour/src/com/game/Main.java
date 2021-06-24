@@ -45,9 +45,11 @@ public class Main {
 		switch (command[0]) {
 		case "go":
 			player.setCurrentRoom(player.getCurrentRoom().getExit(command[1]));
+		case "Interact":
+			player.getCurrentRoom().getName().equals("Livingroom");
 				
 		case "Clock":
-			player.getCurrentRoom().getName().equals("Livingroom");
+			
 				Clock clock=new Clock();
 				clock.showTime();
 				break;
@@ -56,11 +58,13 @@ public class Main {
 			player.getCurrentRoom().getName().equals("Livingroom");
 			Television television=new Television();
 			television.showTV();
+			break;
 			
 		case "Couch":
 			player.getCurrentRoom().getName().equals("Livingroom");
 				Couch couch=new Couch();
 				couch.Print();
+				break;
 			
 		default:
 			System.out.println();

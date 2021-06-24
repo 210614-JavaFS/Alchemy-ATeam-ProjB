@@ -9,7 +9,7 @@ public class Couch extends Fixture implements Interactive{
 		super("Couch", 
 				"Exits\n North: TV is Boardcasting abc news\n West: Exit to hallway\n South:Wall Clock ", 
 				" The front wall of living Room showing  an Ancient Clock that ring on every hour."+ 
-				"On the North of it the Tv drawer where TV Show is casting"+"On the South, There is a nice and soft Couch "+
+				"On the North of it the Tv drawer where TV Show is casting"+"On the South, "+
 				"on the West there is exit for the hallway ");
 	}
 	

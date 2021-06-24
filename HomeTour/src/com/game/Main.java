@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-
+		
+				
 		RoomManager manager = new RoomManager();
 		manager.init();
 		Player player = new Player(manager.startingRoom);
@@ -35,7 +36,6 @@ public class Main {
 		switch (command[0]) {
 		case "go":
 			player.setCurrentRoom(player.getCurrentRoom().getExit(command[1]));
-
 		}
 
 	}

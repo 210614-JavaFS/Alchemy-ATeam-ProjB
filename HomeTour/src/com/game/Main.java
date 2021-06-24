@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-
+		
+				
 		RoomManager manager = new RoomManager();
 		manager.init();
 		Player player = new Player(manager.startingRoom);

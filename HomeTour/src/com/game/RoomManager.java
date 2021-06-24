@@ -67,11 +67,14 @@ public class RoomManager {
 		studentRoom3Exits.add(livingRoom1);
 		studentRoom3.setExits(studentRoom3Exits);
 	
-		ArrayList<Room> livingRoomExits1 = new ArrayList<Room>();
-		livingRoomExits1.add(bathroom);
-		livingRoomExits1.add(studentRoom3);
-		livingRoomExits1.add(kitchen);
-		livingRoom1.setExits(livingRoomExits1);
+
+		ArrayList<Room> livingRoomExits = new ArrayList<Room>();
+		livingRoomExits.add(bathroom);
+		livingRoomExits.add(studentRoom3);
+		livingRoomExits.add(kitchen);
+		livingRoomExits.add(roomB);
+		livingRoom.setExits(livingRoomExits);
+
 		
 
 		ArrayList<Room> kitchenExits = new ArrayList<Room>();

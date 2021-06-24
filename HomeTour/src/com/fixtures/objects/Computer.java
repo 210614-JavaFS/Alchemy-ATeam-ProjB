@@ -15,6 +15,7 @@ public class Computer extends Fixture implements Interactive{
 
 	@Override
 	public void interactWith() {
+		System.out.println(this.getLongDescription());
 		if (isOn) {
 		System.out.println("You turn off the computer");
 		this.setLongDescription("The computer is turn off and the room goes darker now");
@@ -25,6 +26,7 @@ public class Computer extends Fixture implements Interactive{
 			System.out.println("You turn on the computer");
 			this.setLongDescription("You played a little bit with the computer");
 		}
+		System.out.println(this.getLongDescription());
 	}
 	
 }

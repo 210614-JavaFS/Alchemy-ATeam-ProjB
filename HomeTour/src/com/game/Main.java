@@ -22,7 +22,16 @@ public class Main {
 
 		// While condition will change. set to true during development
 		while (true) {
-			printRoom(player);
+			System.out.println("You're at room"  + player.getCurrentRoom().getName());
+			System.out.println("\n\n" + player.getCurrentRoom().getLongDescription());
+			System.out.println("\nItems to interact with \n" + player.getCurrentRoom().objectName());
+			//printRoom(player);
+			System.out.println("\nList of Exits:");
+			for(int j = 0; j<player.getCurrentRoom().getExits().size(); j++)
+			{
+				System.out.println(player.getCurrentRoom().getExits().get(j).getName());
+			}
+			
 			parse(collectInput(), player);
 		}
 
@@ -49,6 +58,7 @@ public class Main {
 	}
 
 	private static void parse(String[] command, Player player) {
+		
 
 		// Command for the moment must be wrote like "go roomName"
 		//System.out.println("hey");
@@ -58,16 +68,24 @@ public class Main {
 		case "go":
 			//System.out.println("hello");
 			player.setCurrentRoom(player.getCurrentRoom().getExit(command[1]));
-			System.out.println("\nList of Exits:");
-			for(int j = 0; j<player.getCurrentRoom().getExits().size(); j++)
-			{
-				System.out.println(player.getCurrentRoom().getExits().get(j).getName());
-			}
+
 			break;
-		case "Interact":
-			player.getCurrentRoom().getName().equals("Livingroom");
-			break;
-		case "Clock":
+		case "use":
+			if (command[1].equals(player.getCurrentRoom().objectName())) {
+				player.getCurrentRoom().interaction();
+				}
+
+// 			System.out.println("\nList of Exits:");
+// 			for(int j = 0; j<player.getCurrentRoom().getExits().size(); j++)
+// 			{
+// 				System.out.println(player.getCurrentRoom().getExits().get(j).getName());
+// 			}
+// 			break;
+// 		case "Interact":
+// 			player.getCurrentRoom().getName().equals("Livingroom");
+// 			break;
+// 		case "Clock":
+
 			
 				Clock clock=new Clock();
 				clock.showTime();

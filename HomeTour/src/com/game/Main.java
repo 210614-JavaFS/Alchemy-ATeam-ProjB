@@ -2,21 +2,10 @@ package com.game;
 
 import java.util.Scanner;
 
-import com.fixtures.rooms.RoomB;
-
 public class Main {
 
 	public static void main(String[] args) {
 		
-		RoomB ra = new RoomB();
-		
-		System.out.println(ra.getName() + ra.getShortDescription() + ra.getLongDescription());
-		System.out.println(ra.objName());
-		System.out.println(ra.objDesc());
-		ra.objInteract();
-		System.out.println(ra.objDesc());
-		ra.objInteract();
-		System.out.println(ra.objDesc());
 				
 		RoomManager manager = new RoomManager();
 		manager.init();

@@ -41,7 +41,6 @@ public class Room extends Fixture {
 
 		}
 		return exitRoom;
-
 	}
 
 }

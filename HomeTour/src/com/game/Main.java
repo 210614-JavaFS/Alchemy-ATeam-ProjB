@@ -2,11 +2,15 @@ package com.game;
 
 import java.util.Scanner;
 
+import com.fixtures.objects.*;
+import com.fixtures.rooms.LivingRoom;
+
 public class Main {
 
+	static RoomManager manager;
 	public static void main(String[] args) {
 
-		RoomManager manager = new RoomManager();
+		manager = new RoomManager();
 		manager.init();
 		Player player = new Player(manager.startingRoom);
 
@@ -19,7 +23,12 @@ public class Main {
 	}
 
 	private static void printRoom(Player player) {
-		System.out.println(player.getCurrentRoom().toString());
+		System.out.println(player.getCurrentRoom().getName());
+		System.out.println();
+		System.out.println(player.getCurrentRoom().getLongDescription());
+		System.out.println();
+		System.out.println(player.getCurrentRoom().getShortDescription());
+		System.out.println();
 	}
 
 	private static String[] collectInput() {
@@ -32,12 +41,33 @@ public class Main {
 	private static void parse(String[] command, Player player) {
 
 		// Command for the moment must be wrote like "go roomName"
+		
 		switch (command[0]) {
 		case "go":
 			player.setCurrentRoom(player.getCurrentRoom().getExit(command[1]));
+				
+		case "Clock":
+			player.getCurrentRoom().getName().equals("Livingroom");
+				Clock clock=new Clock();
+				clock.showTime();
+				break;
 
+		case "Television":
+			player.getCurrentRoom().getName().equals("Livingroom");
+			Television television=new Television();
+			television.showTV();
+			
+		case "Couch":
+			player.getCurrentRoom().getName().equals("Livingroom");
+				Couch couch=new Couch();
+				couch.Print();
+			
+		default:
+			System.out.println();
+			System.out.println("Wrong input");
+			System.out.println();
+			
+			
 		}
-
 	}
-
 }

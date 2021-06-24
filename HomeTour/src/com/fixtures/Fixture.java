@@ -16,7 +16,8 @@ public abstract class Fixture {
 	public Fixture() {
 		this.name = "";
 		this.shortDescription = "";
-		this.longDescription = "";
+		
+	this.longDescription = "";
 	}
 
 	public void setName(String name) {

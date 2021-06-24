@@ -3,6 +3,8 @@ package com.game;
 import java.util.ArrayList;
 
 import com.fixtures.rooms.Bathroom;
+import com.fixtures.rooms.Hallway;
+import com.fixtures.rooms.LivingRoom;
 import com.fixtures.rooms.Room;
 
 public class RoomManager {
@@ -13,22 +15,27 @@ public class RoomManager {
 	public void init() {
 
 		// Creations of all the rooms of the game and add their respective exits.
-
-		Room livingRoom = new Room("LivingRoom", "The living room of the college dorm",
-				"This is the living room of a college dorm apartment that lives 4 students"); // Generic Description.
-																								// Will change
-
-		Bathroom bathroom = new Bathroom("Bathroom",
-				"This is the bathroom of Student1 and Student2", "This will be longer eventually Need to change it");
-
-		ArrayList<Room> bathroom1Exits = new ArrayList<Room>();
-		bathroom1Exits.add(livingRoom);
-		bathroom.setExits(bathroom1Exits);
 		
+		Room hallway = new Room("Hallway", 
+				"Exits:\nEast: Kitchen\nNorth: Bedroom\nSouth: Living Room\nWest: Bathroom", 
+				"Long Description of Hallway");
+		Room livingRoom = new Room("Livingroom",
+				"Items: \nwall clock\n\nExits:\nEast: An ancient clock is hanging on the wall\nNorth: ABC news are broadcasting on Television\nSouth: Comfortable Couch with coffee table\nWest: Exits to Hallway",
+				"Long Description of Living room");
+		
+		rooms.add(hallway);
+		rooms.add(livingRoom);
+		
+		startingRoom = hallway;
+		
+		ArrayList<Room> hallwayExits = new ArrayList<Room>();
 		ArrayList<Room> livingRoomExits = new ArrayList<Room>();
-		livingRoomExits.add(bathroom);
+		
+		livingRoomExits.add(hallway);
+		hallwayExits.add(livingRoom);
+		
+		
+		hallway.setExits(hallwayExits);
 		livingRoom.setExits(livingRoomExits);
-
-		startingRoom = livingRoom;
 	}
 }

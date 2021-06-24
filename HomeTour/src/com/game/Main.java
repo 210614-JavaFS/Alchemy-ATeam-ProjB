@@ -36,7 +36,6 @@ public class Main {
 		switch (command[0]) {
 		case "go":
 			player.setCurrentRoom(player.getCurrentRoom().getExit(command[1]));
-
 		}
 
 	}

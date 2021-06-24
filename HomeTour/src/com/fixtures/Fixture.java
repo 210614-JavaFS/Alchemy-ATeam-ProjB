@@ -4,7 +4,7 @@ public abstract class Fixture {
 
 	private String name;
 	private String shortDescription;
-	protected String longDescription;
+	private String longDescription;
 
 	public Fixture(String name, String shortDescription, String longDescription) {
 		super();

@@ -42,4 +42,12 @@ public abstract class Fixture {
 	public String getLongDescription() {
 		return longDescription;
 	}
+	
+	public String objectName() {
+		return "";
+	}
+	
+	public void interaction() {
+		
+	}
 }

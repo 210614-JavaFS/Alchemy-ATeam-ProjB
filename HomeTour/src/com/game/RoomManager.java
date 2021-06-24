@@ -43,6 +43,7 @@ public class RoomManager {
 		livingRoomExits.add(bathroom);
 		livingRoomExits.add(studentRoom3);
 		livingRoomExits.add(kitchen);
+		livingRoomExits.add(roomB);
 		livingRoom.setExits(livingRoomExits);
 		
 

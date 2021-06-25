@@ -2,6 +2,7 @@ package com.fixtures;
 
 public abstract class Fixture {
 
+
 	private String name;
 	private String shortDescription;
 	private String longDescription;

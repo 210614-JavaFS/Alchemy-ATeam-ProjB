@@ -31,13 +31,6 @@ public class BedroomT extends Room{
 	}
 	
 
-	 public String objDesc() {
-			return closet.getLongDescription();
-		}
-		
-		public void objInteract() {
-			closet.interactWith();
-		}
 
 	
 }

@@ -60,9 +60,9 @@ public class RoomManager {
 		stove.add("Pan");
 		Kitchen kitchen = new Kitchen("Kitchen", "The kichen of the college dorm", "This is the kitchen of a 4 person college dorm apartment.", stove );
 		Bathroom bathroom = new Bathroom("Bathroom",
-				"This is the bathroom of Student1 and Student2", "This will be longer eventually Need to change it");
+				"This is the bathroom of Student1 and Student2", "A standard bathroom for an average college apartment ");
 
-		StudentRoom3 studentRoom3 = new StudentRoom3();
+		StudentRoom3 BedroomC = new StudentRoom3();
 		RoomB roomB = new RoomB();
 		
 		ArrayList<Room> bathroom1Exits = new ArrayList<Room>();
@@ -72,12 +72,12 @@ public class RoomManager {
 		
 		ArrayList<Room> studentRoom3Exits = new ArrayList<Room>();
 		studentRoom3Exits.add(hallway);
-		studentRoom3.setExits(studentRoom3Exits);
+		BedroomC.setExits(studentRoom3Exits);
 	
 
 		livingRoomExits.add(bathroom);
 		livingRoomExits.add(hallway);
-		livingRoomExits.add(studentRoom3);
+		livingRoomExits.add(BedroomC);
 		livingRoomExits.add(kitchen);
 		livingRoomExits.add(roomB);
 
@@ -89,7 +89,7 @@ public class RoomManager {
 		ArrayList<Room> bedroomAexits = new ArrayList<Room>();
 		bedroomAexits.add(livingRoom);
 		bedroomAexits.add(bathroom);
-		bedroom.setExits(bedroomAexits);
+		bedroomA.setExits(bedroomAexits);
 		
 
 

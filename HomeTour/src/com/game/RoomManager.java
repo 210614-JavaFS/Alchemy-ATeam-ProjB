@@ -26,7 +26,7 @@ public class RoomManager {
 				"Exits:\nEast: Kitchen\nNorth: Bedroom\nSouth: Living Room\nWest: Bathroom", 
 				"Long Description of Hallway");
 		Room livingRoom = new LivingRoom("Livingroom",
-				"Items: \nwall clock\nTelevision\nCouch\n\nExits:\nEast: An ancient clock is hanging on the wall\nNorth: ABC news are broadcasting on Television\nSouth: Comfortable Couch with coffee table\nWest: Exits to Hallway",
+				"Items: \nwall clock\nTelevision\nCouch\n\nExits:\nEast: An ancient clock is hanging on the wall\nNorth: abc news are broadcasting on Television\nSouth: Comfortable Couch with coffee table\nWest: Exits to Hallway",
 				"Long Description of Living room");
 		
 		

@@ -76,29 +76,11 @@ public class Main {
 		switch (command[0]) {
 		case "go":
 			player.setCurrentRoom(player.getCurrentRoom().getExit(command[1]));
-<<<<<<< HEAD
-			break;
-=======
-
 			break;
 		case "use":
 			if (command[1].equals(player.getCurrentRoom().objectName())) {
 				player.getCurrentRoom().interaction();
-				}
-
-// 			System.out.println("\nList of Exits:");
-// 			for(int j = 0; j<player.getCurrentRoom().getExits().size(); j++)
-// 			{
-// 				System.out.println(player.getCurrentRoom().getExits().get(j).getName());
-// 			}
-// 			break;
-// 		case "Interact":
-// 			player.getCurrentRoom().getName().equals("Livingroom");
-// 			break;
-// 		case "Clock":
-
->>>>>>> edf954c35962bf4069893ca7e61532e4e5621e93
-			
+				}		
 		case "interact":
 			// Will get the current Room name
 			Room room = player.getCurrentRoom();
@@ -143,12 +125,6 @@ public class Main {
 			System.out.println("Wrong input");
 			System.out.println();
 			
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> edf954c35962bf4069893ca7e61532e4e5621e93
 			
 		}
 	}

@@ -25,11 +25,11 @@ public class RoomB extends Room {
 	public void interaction() {
 		pc.interactWith();
 	}
-		public String objDesc() {
-			return pc.getLongDescription();
-		}
+	public String objDesc() {
+		return pc.getLongDescription();
+	}
 		
-		public void objInteract() {
-			pc.interactWith();
-		}
+	public void objInteract() {
+		pc.interactWith();
+	}
 }

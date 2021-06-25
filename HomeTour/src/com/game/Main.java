@@ -3,7 +3,6 @@ package com.game;
 import java.util.Scanner;
 
 import com.fixtures.objects.*;
-import com.fixtures.rooms.LivingRoom;
 import com.fixtures.rooms.Room;
 
 public class Main {
@@ -74,82 +73,18 @@ public class Main {
 		// Command for the moment must be wrote like "go roomName"
 		
 		switch (command[0]) {
-		case "go":
-			player.setCurrentRoom(player.getCurrentRoom().getExit(command[1]));
-<<<<<<< HEAD
-			break;
-=======
-
-			break;
-		case "use":
-			if (command[1].equals(player.getCurrentRoom().objectName())) {
-				player.getCurrentRoom().interaction();
-				}
-
-// 			System.out.println("\nList of Exits:");
-// 			for(int j = 0; j<player.getCurrentRoom().getExits().size(); j++)
-// 			{
-// 				System.out.println(player.getCurrentRoom().getExits().get(j).getName());
-// 			}
-// 			break;
-// 		case "Interact":
-// 			player.getCurrentRoom().getName().equals("Livingroom");
-// 			break;
-// 		case "Clock":
-
->>>>>>> edf954c35962bf4069893ca7e61532e4e5621e93
-			
-		case "interact":
-			// Will get the current Room name
-			Room room = player.getCurrentRoom();
-		
-			// anyone can add it's case like i am doing for livingroom
-			switch (player.getCurrentRoom().getName()) {
-			
-			//       ************ LivingRoom Case ****************
-			case "Livingroom":
-				LivingRoom livingRoom = (LivingRoom) room;
-				
-				switch (command[1]) {
-				case "Clock":
-					livingRoom.getClockInteractive().interactWith();
-					
-					Clock clock = (Clock)livingRoom.getClockInteractive();
-					
-					printFixtureInfo(clock.getName(), clock.getShortDescription(), clock.getLongDescription());
-					break;
-				case "Television":
-					livingRoom.getTVInteractive().interactWith();
-					break;
-				case "Couch":
-					livingRoom.getCouchInteractive().interactWith();
-					break;
-
-				default:
-					System.out.println("Wrong Input. Try Again!!!");
-					break;
-				}
-				break;
-				//       ************ LivingRoom Case ****************
-
-			default:
-				System.out.println("Wrong Input. Try Again!!!");
+			case "go":
+			{
+				player.setCurrentRoom(player.getCurrentRoom().getExit(command[1]));
 				break;
 			}
-			break;
-			
-		default:
-			System.out.println();
-			System.out.println("Wrong input");
-			System.out.println();
-			
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> edf954c35962bf4069893ca7e61532e4e5621e93
-			
+			case "use":
+			{
+				if (command[1].equals(player.getCurrentRoom().objectName())) {
+					player.getCurrentRoom().interaction();
+				}
+				break;
+			}
 		}
 	}
 }

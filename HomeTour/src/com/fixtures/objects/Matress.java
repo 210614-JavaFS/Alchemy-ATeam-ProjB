@@ -16,6 +16,16 @@ public class Matress extends Fixture implements Interactive {
 
 	public Matress() {
 		super();
+		this.setName("Mattress");
+		if (isDirty())
+		{
+			super.setLongDescription("A dirty matress that looks possibly " + color + " and that takes up the small expensive room");
+			super.setShortDescription("A dirty mattress that looks " + color + " but it's hard to tell since it's so dirty ");
+		} else {
+			super.setLongDescription("A " + color +  " matress that takes up the small expensive room");
+			super.setShortDescription("A " + color + "mattress");
+		}
+    
 	}
 
 	public Matress(String name, String shortDescription, String longDescription, String color) {
@@ -24,12 +34,7 @@ public class Matress extends Fixture implements Interactive {
 		
 		this.color = color;
 		
-		if (isDirty())
-		{
-			super.setShortDescription("A dirty matress that looks possibly " + color + " and that takes up the small expensive room");
-		} else {
-			super.setShortDescription("A " + color +  " matress that takes up the small expensive room");
-		}
+
 	}
 
 	@Override

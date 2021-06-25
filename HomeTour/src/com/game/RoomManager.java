@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 import com.fixtures.rooms.Bathroom;
 
-import com.fixtures.rooms.Hallway;
-import com.fixtures.rooms.LivingRoom;
 import com.fixtures.rooms.Kitchen;
 
 import com.fixtures.rooms.Room;
@@ -25,7 +23,7 @@ public class RoomManager {
 		Room hallway = new Room("Hallway", 
 				"Exits:\nEast: Kitchen\nNorth: Bedroom\nSouth: Living Room\nWest: Bathroom", 
 				"Long Description of Hallway");
-		Room livingRoom = new LivingRoom("Livingroom",
+		Room livingRoom = new Room("Livingroom",
 				"Items: \nwall clock\nTelevision\nCouch\n\nExits:\nEast: An ancient clock is hanging on the wall\nNorth: ABC news are broadcasting on Television\nSouth: Comfortable Couch with coffee table\nWest: Exits to Hallway",
 				"Long Description of Living room");
 		
@@ -38,15 +36,12 @@ public class RoomManager {
 		ArrayList<Room> hallwayExits = new ArrayList<Room>();
 		ArrayList<Room> livingRoomExits = new ArrayList<Room>();
 		
-		livingRoomExits.add(hallway);
 		hallwayExits.add(livingRoom);
 		
 		
 		hallway.setExits(hallwayExits);
 		livingRoom.setExits(livingRoomExits);
 
-
-		
 		ArrayList<String> stove = new ArrayList<String>();
 		stove.add("Pot");
 		stove.add("Pan");
@@ -54,7 +49,7 @@ public class RoomManager {
 		Bathroom bathroom = new Bathroom("Bathroom",
 				"This is the bathroom of Student1 and Student2", "This will be longer eventually Need to change it");
 
-		StudentRoom3 studentRoom3 = new StudentRoom3("StudentRoom3", "A blue matress that takes up the small expensive room", "A blue matress that takes up the small expensive room");
+		StudentRoom3 studentRoom3 = new StudentRoom3();
 		RoomB roomB = new RoomB();
 		
 		ArrayList<Room> bathroom1Exits = new ArrayList<Room>();
@@ -66,19 +61,14 @@ public class RoomManager {
 		studentRoom3Exits.add(hallway);
 		studentRoom3.setExits(studentRoom3Exits);
 	
-<<<<<<< HEAD
-		
-=======
 
-		ArrayList<Room> livingRoomExits = new ArrayList<Room>();
 		livingRoomExits.add(bathroom);
+		livingRoomExits.add(hallway);
 		livingRoomExits.add(studentRoom3);
 		livingRoomExits.add(kitchen);
 		livingRoomExits.add(roomB);
 		livingRoom.setExits(livingRoomExits);
 
->>>>>>> edf954c35962bf4069893ca7e61532e4e5621e93
-		
 
 		ArrayList<Room> kitchenExits = new ArrayList<Room>();
 		kitchenExits.add(hallway);
@@ -88,12 +78,9 @@ public class RoomManager {
 		ArrayList<Room> roomBExits = new ArrayList<Room>();
 		roomBExits.add(hallway);
 		roomB.setExits(roomBExits);
-<<<<<<< HEAD
-=======
 
 
-		startingRoom = livingRoom1;
+		startingRoom = livingRoom;
 
->>>>>>> edf954c35962bf4069893ca7e61532e4e5621e93
 	}
 }

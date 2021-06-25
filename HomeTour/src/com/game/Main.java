@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.fixtures.objects.*;
 import com.fixtures.rooms.LivingRoom;
+import com.fixtures.rooms.Room;
 
 public class Main {
 
@@ -47,50 +48,70 @@ public class Main {
 		System.out.println("Enter your command");
 		return scan.nextLine().split(" ");
 	}
+	private static void printFixtureInfo(String name, String shortDesc, String longDesc)
+	{
+		System.out.println();
+		System.out.println(name);
+		System.out.println();
+		System.out.println();
+		System.out.println(shortDesc);
+		System.out.println();
+		System.out.println(longDesc);
+	}
 
 	private static void parse(String[] command, Player player) {
 
 		// Command for the moment must be wrote like "go roomName"
-		//System.out.println("hey");
-		//System.out.println(command[0]);
-
+		
 		switch (command[0]) {
 		case "go":
-			//System.out.println("hello");
 			player.setCurrentRoom(player.getCurrentRoom().getExit(command[1]));
-		case "Interact":
-			player.getCurrentRoom().getName().equals("Livingroom");
-				
-		case "Clock":
-			
-				Clock clock=new Clock();
-				clock.showTime();
-				break;
-
-		case "Television":
-			player.getCurrentRoom().getName().equals("Livingroom");
-			Television television=new Television();
-			television.showTV();
 			break;
 			
-		case "Couch":
-			player.getCurrentRoom().getName().equals("Livingroom");
-				Couch couch=new Couch();
-				couch.Print();
+		case "interact":
+			// Will get the current Room name
+			Room room = player.getCurrentRoom();
+		
+			// anyone can add it's case like i am doing for livingroom
+			switch (player.getCurrentRoom().getName()) {
+			
+			//       ************ LivingRoom Case ****************
+			case "Livingroom":
+				LivingRoom livingRoom = (LivingRoom) room;
+				
+				switch (command[1]) {
+				case "Clock":
+					livingRoom.getClockInteractive().interactWith();
+					
+					Clock clock = (Clock)livingRoom.getClockInteractive();
+					
+					printFixtureInfo(clock.getName(), clock.getShortDescription(), clock.getLongDescription());
+					break;
+				case "Television":
+					livingRoom.getTVInteractive().interactWith();
+					break;
+				case "Couch":
+					livingRoom.getCouchInteractive().interactWith();
+					break;
+
+				default:
+					System.out.println("Wrong Input. Try Again!!!");
+					break;
+				}
 				break;
+				//       ************ LivingRoom Case ****************
+
+			default:
+				System.out.println("Wrong Input. Try Again!!!");
+				break;
+			}
+			break;
 			
 		default:
 			System.out.println();
 			System.out.println("Wrong input");
 			System.out.println();
 			
-
-			System.out.println("\nList of Exits:");
-			for(int j = 0; j<player.getCurrentRoom().getExits().size(); j++)
-			{
-				System.out.println(player.getCurrentRoom().getExits().get(j).getName());
-			}
-
 			
 		}
 	}

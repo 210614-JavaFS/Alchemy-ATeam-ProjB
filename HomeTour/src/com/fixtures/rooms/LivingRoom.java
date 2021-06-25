@@ -24,8 +24,8 @@ public class LivingRoom extends Room {
 		return TV;
 	}
 
-	public void setTVInteractive(Interactive tV) {
-		TV = tV;
+	public void setTVInteractive(Interactive TV) {
+		this.TV = TV;
 	}
 
 	public Interactive getCouchInteractive() {
@@ -33,7 +33,7 @@ public class LivingRoom extends Room {
 	}
 
 	public void setCouchInteractive(Interactive couch) {
-		Couch = couch;
+		this.Couch = couch;
 	}
 
 	public LivingRoom(String name, String shortDescription, String longDescription) {

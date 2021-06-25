@@ -16,11 +16,6 @@ public class Couch extends Fixture implements Interactive{
 	
 	@Override
 	public void interactWith() {
-		// TODO Auto-generated method stub
-		
-	}
-	public void Print () {
 		System.out.println("I'm Couch");
 	}
-
 }

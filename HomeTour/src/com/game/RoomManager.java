@@ -3,6 +3,7 @@ package com.game;
 import java.util.ArrayList;
 
 import com.fixtures.rooms.Bathroom;
+import com.fixtures.rooms.BedroomT;
 import com.fixtures.rooms.Hallway;
 import com.fixtures.rooms.Kitchen;
 import com.fixtures.rooms.LivingRoom;
@@ -19,7 +20,7 @@ public class RoomManager {
 
 		// Creations of all the rooms of the game and add their respective exits.
 
-		
+		BedroomT bedroomA = new BedroomT();
 		Hallway hallway = new Hallway("Hallway", 
 				"Hallway", 
 				"A short hallway");
@@ -35,6 +36,10 @@ public class RoomManager {
 		
 		ArrayList<Room> hallwayExits = new ArrayList<Room>();
 		ArrayList<Room> livingRoomExits = new ArrayList<Room>();
+		ArrayList<Room> bedroomAExits = new ArrayList<Room>();
+		
+		bedroomAExits.add(livingRoom);
+		bedroomA.setExits(bedroomAExits);
 		
 		hallwayExits.add(livingRoom);
 		
@@ -67,6 +72,7 @@ public class RoomManager {
 		livingRoomExits.add(studentRoom3);
 		livingRoomExits.add(kitchen);
 		livingRoomExits.add(roomB);
+		livingRoomExits.add(bedroomA);
 		livingRoom.setExits(livingRoomExits);
 
 

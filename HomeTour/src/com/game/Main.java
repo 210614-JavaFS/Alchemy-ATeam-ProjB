@@ -23,22 +23,31 @@ public class Main {
 
 		// While condition will change. set to true during development
 		while (true) {
-			printRoom(player);
+			System.out.println("You're at room"  + player.getCurrentRoom().getName());
+			System.out.println("\n\n" + player.getCurrentRoom().getLongDescription());
+			System.out.println("\nItems to interact with \n" + player.getCurrentRoom().objectName());
+			//printRoom(player);
+			System.out.println("\nList of Exits:");
+			for(int j = 0; j<player.getCurrentRoom().getExits().size(); j++)
+			{
+				System.out.println(player.getCurrentRoom().getExits().get(j).getName());
+			}
+			
 			parse(collectInput(), player);
 		}
 
 	}
 
 	private static void printRoom(Player player) {
-
-		System.out.println(player.getCurrentRoom().getName());
+		
+		System.out.println("\nCurrent Room: "+player.getCurrentRoom().getName()+ "\n");
 		System.out.println();
 		System.out.println(player.getCurrentRoom().getLongDescription());
 		System.out.println();
 		System.out.println(player.getCurrentRoom().getShortDescription());
 		System.out.println();
 
-		System.out.println("\nCurrent Room: "+player.getCurrentRoom().getName()+ "\n");
+
 
 	}
 
@@ -60,13 +69,35 @@ public class Main {
 	}
 
 	private static void parse(String[] command, Player player) {
+		
 
 		// Command for the moment must be wrote like "go roomName"
 		
 		switch (command[0]) {
 		case "go":
 			player.setCurrentRoom(player.getCurrentRoom().getExit(command[1]));
+<<<<<<< HEAD
 			break;
+=======
+
+			break;
+		case "use":
+			if (command[1].equals(player.getCurrentRoom().objectName())) {
+				player.getCurrentRoom().interaction();
+				}
+
+// 			System.out.println("\nList of Exits:");
+// 			for(int j = 0; j<player.getCurrentRoom().getExits().size(); j++)
+// 			{
+// 				System.out.println(player.getCurrentRoom().getExits().get(j).getName());
+// 			}
+// 			break;
+// 		case "Interact":
+// 			player.getCurrentRoom().getName().equals("Livingroom");
+// 			break;
+// 		case "Clock":
+
+>>>>>>> edf954c35962bf4069893ca7e61532e4e5621e93
 			
 		case "interact":
 			// Will get the current Room name
@@ -112,6 +143,12 @@ public class Main {
 			System.out.println("Wrong input");
 			System.out.println();
 			
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> edf954c35962bf4069893ca7e61532e4e5621e93
 			
 		}
 	}

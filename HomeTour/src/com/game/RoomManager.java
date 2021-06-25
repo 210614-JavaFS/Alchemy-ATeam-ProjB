@@ -66,7 +66,18 @@ public class RoomManager {
 		studentRoom3Exits.add(hallway);
 		studentRoom3.setExits(studentRoom3Exits);
 	
+<<<<<<< HEAD
 		
+=======
+
+		ArrayList<Room> livingRoomExits = new ArrayList<Room>();
+		livingRoomExits.add(bathroom);
+		livingRoomExits.add(studentRoom3);
+		livingRoomExits.add(kitchen);
+		livingRoomExits.add(roomB);
+		livingRoom.setExits(livingRoomExits);
+
+>>>>>>> edf954c35962bf4069893ca7e61532e4e5621e93
 		
 
 		ArrayList<Room> kitchenExits = new ArrayList<Room>();
@@ -77,5 +88,12 @@ public class RoomManager {
 		ArrayList<Room> roomBExits = new ArrayList<Room>();
 		roomBExits.add(hallway);
 		roomB.setExits(roomBExits);
+<<<<<<< HEAD
+=======
+
+
+		startingRoom = livingRoom1;
+
+>>>>>>> edf954c35962bf4069893ca7e61532e4e5621e93
 	}
 }

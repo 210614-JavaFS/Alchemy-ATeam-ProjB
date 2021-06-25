@@ -27,4 +27,22 @@ public class Kitchen extends Room{
 	public Fridge getFridge() {
 		return this.fridge;
 	}
+	
+	@Override 
+	public String objectName() {
+		return stove.getName();
+	}
+	
+	@Override
+	public void interaction() {
+		stove.interactWith();
+	}
+	
+	public String objDesc() {
+		return stove.getLongDescription();
+	}
+		
+	public void objInteract() {
+		stove.interactWith();
+	}
 }

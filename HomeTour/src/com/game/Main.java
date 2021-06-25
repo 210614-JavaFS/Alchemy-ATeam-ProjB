@@ -33,8 +33,9 @@ public class Main {
 
 		// Command for the moment must be wrote like "go roomName"
 		switch (command[0]) {
-		case "go":
+		case "go Bedroom-A":
 			player.setCurrentRoom(player.getCurrentRoom().getExit(command[1]));
+		
 
 		}
 

@@ -2,6 +2,7 @@ package com.fixtures;
 
 public abstract class Fixture {
 
+
 	private String name;
 	private String shortDescription;
 	private String longDescription;
@@ -16,7 +17,8 @@ public abstract class Fixture {
 	public Fixture() {
 		this.name = "";
 		this.shortDescription = "";
-		this.longDescription = "";
+		
+	this.longDescription = "";
 	}
 
 	public void setName(String name) {
@@ -41,5 +43,13 @@ public abstract class Fixture {
 
 	public String getLongDescription() {
 		return longDescription;
+	}
+	
+	public String objectName() {
+		return "";
+	}
+	
+	public void interaction() {
+		
 	}
 }

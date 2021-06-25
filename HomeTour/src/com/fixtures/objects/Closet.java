@@ -19,14 +19,14 @@ public class Closet extends Fixture implements Interactive{
 		System.out.println( "The closet is ready");
 		
 		if(getNumOfClothes()<=20) {
-			System.out.println("the closet is full");
+			System.out.println("the closet has space");
 		}else {
-			System.out.println("you can add more clothes");
+			System.out.println("you can not add any more clothes");
 		}
 		
 	}
 
-	public Closet(String name, String shortDescription, String longDescription, int numOfClothes) {
+	public Closet(String name, String shortDescription, String longDescription,int numOfClothes) {
 		super(name, shortDescription, longDescription);
 		this.numOfClothes = numOfClothes;
 	}

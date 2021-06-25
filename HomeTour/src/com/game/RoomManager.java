@@ -29,24 +29,6 @@ public class RoomManager {
 				"Items: \nwall clock\nTelevision\nCouch\n\nExits:\nEast: An ancient clock is hanging on the wall\nNorth: ABC news are broadcasting on Television\nSouth: Comfortable Couch with coffee table\nWest: Exits to Hallway",
 				"Long Description of Living room");
 		
-		
-		rooms.add(hallway);
-		rooms.add(livingRoom);
-		
-		startingRoom = hallway;
-		
-		ArrayList<Room> hallwayExits = new ArrayList<Room>();
-		ArrayList<Room> livingRoomExits = new ArrayList<Room>();
-		
-		livingRoomExits.add(hallway);
-		hallwayExits.add(livingRoom);
-		
-		
-		hallway.setExits(hallwayExits);
-		livingRoom.setExits(livingRoomExits);
-
-
-		
 		ArrayList<String> stove = new ArrayList<String>();
 		stove.add("Pot");
 		stove.add("Pan");
@@ -56,44 +38,69 @@ public class RoomManager {
 
 		StudentRoom3 studentRoom3 = new StudentRoom3("StudentRoom3", "A blue matress that takes up the small expensive room", "A blue matress that takes up the small expensive room");
 		RoomB roomB = new RoomB();
+		rooms.add(hallway);
+		rooms.add(livingRoom);
+		rooms.add(kitchen);
+		rooms.add(bathroom);
+		rooms.add(studentRoom3);
+		rooms.add(roomB);
+		
+		startingRoom = hallway;
+		
+		ArrayList<Room> hallwayExits = new ArrayList<Room>();
+		hallwayExits.add(livingRoom);
+		hallwayExits.add(kitchen);
+		hallwayExits.add(studentRoom3);
+		hallwayExits.add(roomB);
+		hallwayExits.add(bathroom);
+		hallway.setExits(hallwayExits);
+		
+		ArrayList<Room> livingRoomExits = new ArrayList<Room>();
+		livingRoomExits.add(hallway);
+		livingRoom.setExits(livingRoomExits);
 		
 		ArrayList<Room> bathroom1Exits = new ArrayList<Room>();
 		bathroom1Exits.add(hallway);
 		bathroom.setExits(bathroom1Exits);
-	
 		
 		ArrayList<Room> studentRoom3Exits = new ArrayList<Room>();
 		studentRoom3Exits.add(hallway);
 		studentRoom3.setExits(studentRoom3Exits);
-	
-<<<<<<< HEAD
 		
-=======
-
-		ArrayList<Room> livingRoomExits = new ArrayList<Room>();
-		livingRoomExits.add(bathroom);
-		livingRoomExits.add(studentRoom3);
-		livingRoomExits.add(kitchen);
-		livingRoomExits.add(roomB);
-		livingRoom.setExits(livingRoomExits);
-
->>>>>>> edf954c35962bf4069893ca7e61532e4e5621e93
-		
-
 		ArrayList<Room> kitchenExits = new ArrayList<Room>();
 		kitchenExits.add(hallway);
 		kitchen.setExits(kitchenExits);
 		
-
 		ArrayList<Room> roomBExits = new ArrayList<Room>();
 		roomBExits.add(hallway);
 		roomB.setExits(roomBExits);
-<<<<<<< HEAD
-=======
+
+		
+		
+		
+		
 
 
-		startingRoom = livingRoom1;
 
->>>>>>> edf954c35962bf4069893ca7e61532e4e5621e93
+		
+
+		
+		
+
+	
+		
+		
+
+	
+		
+
+
+		
+
+		
+		
+
+
+
 	}
 }

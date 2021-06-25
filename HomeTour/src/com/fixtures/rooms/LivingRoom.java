@@ -1,5 +1,7 @@
 package com.fixtures.rooms;
 
+import java.util.*;
+
 import com.fixtures.objects.*;
 import com.fixtures.objects.Interactive;
 
@@ -38,6 +40,12 @@ public class LivingRoom extends Room {
 
 	public LivingRoom(String name, String shortDescription, String longDescription) {
 		super(name, shortDescription, longDescription);
+		ArrayList<Interactive> interact = new ArrayList<Interactive>();
+		interact.add(this.clock);
+		interact.add(this.Couch);
+		interact.add(this.TV);
+		this.setInteractive(interact);
+		
 	}
 		
 }

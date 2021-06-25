@@ -23,9 +23,16 @@ public class Main {
 
 		// While condition will change. set to true during development
 		while (true) {
-			System.out.println("You're at room"  + player.getCurrentRoom().getName());
+			System.out.println("You're in "  + player.getCurrentRoom().getName());
 			System.out.println("\n\n" + player.getCurrentRoom().getLongDescription());
-			System.out.println("\nItems to interact with \n" + player.getCurrentRoom().objectName());
+			System.out.println("\nItems to interact with \n");
+			if(player.getCurrentRoom().getInteractive() != null) {
+				for(int i = 0; i<player.getCurrentRoom().getInteractive().size(); i++) {
+					System.out.println(player.getCurrentRoom().getInteractive().get(i).toString());
+				}				
+			}else {
+				System.out.println("no items");
+			}
 			//printRoom(player);
 			System.out.println("\nList of Exits:");
 			for(int j = 0; j<player.getCurrentRoom().getExits().size(); j++)
@@ -76,80 +83,50 @@ public class Main {
 		switch (command[0]) {
 		case "go":
 			player.setCurrentRoom(player.getCurrentRoom().getExit(command[1]));
-<<<<<<< HEAD
+ 			System.out.println("\nList of Exits:");
+ 			for(int j = 0; j<player.getCurrentRoom().getExits().size(); j++)
+ 			{
+ 				System.out.println(player.getCurrentRoom().getExits().get(j).getName());
+ 			}
 			break;
-=======
-
-			break;
-		case "use":
-			if (command[1].equals(player.getCurrentRoom().objectName())) {
-				player.getCurrentRoom().interaction();
-				}
-
-// 			System.out.println("\nList of Exits:");
-// 			for(int j = 0; j<player.getCurrentRoom().getExits().size(); j++)
-// 			{
-// 				System.out.println(player.getCurrentRoom().getExits().get(j).getName());
-// 			}
-// 			break;
-// 		case "Interact":
-// 			player.getCurrentRoom().getName().equals("Livingroom");
-// 			break;
-// 		case "Clock":
-
->>>>>>> edf954c35962bf4069893ca7e61532e4e5621e93
 			
 		case "interact":
 			// Will get the current Room name
 			Room room = player.getCurrentRoom();
-		
-			// anyone can add it's case like i am doing for livingroom
-			switch (player.getCurrentRoom().getName()) {
-			
-			//       ************ LivingRoom Case ****************
-			case "Livingroom":
-				LivingRoom livingRoom = (LivingRoom) room;
-				
-				switch (command[1]) {
-				case "Clock":
-					livingRoom.getClockInteractive().interactWith();
-					
-					Clock clock = (Clock)livingRoom.getClockInteractive();
-					
-					printFixtureInfo(clock.getName(), clock.getShortDescription(), clock.getLongDescription());
+			if(room.getName() == "Livingroom") {
+				switch(command[1]) {
+					case "Clock":
+						room.getInteractive().get(0).interactWith();
+						break;
+					case "Couch":
+						room.getInteractive().get(1).interactWith();
+						break;
+					case "TV":
+						room.getInteractive().get(2).interactWith();
+						break;
+					default:
+						System.out.println("\nWrong Input\n");
+				}
+			}else if(room.getName() == "Kitchen") {
+				switch(command[1]) {
+				case "Stove":
+					room.getInteractive().get(0).interactWith();
 					break;
-				case "Television":
-					livingRoom.getTVInteractive().interactWith();
-					break;
-				case "Couch":
-					livingRoom.getCouchInteractive().interactWith();
-					break;
-
-				default:
-					System.out.println("Wrong Input. Try Again!!!");
+				case "Fridge":
+					room.getInteractive().get(1).interactWith();
 					break;
 				}
-				break;
-				//       ************ LivingRoom Case ****************
-
-			default:
-				System.out.println("Wrong Input. Try Again!!!");
-				break;
+				
 			}
-			break;
+			// anyone can add it's case like i am doing for livingroom
 			
+			break;
 		default:
 			System.out.println();
 			System.out.println("Wrong input");
 			System.out.println();
-			
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> edf954c35962bf4069893ca7e61532e4e5621e93
-			
+			break;
+		
 		}
 	}
 }

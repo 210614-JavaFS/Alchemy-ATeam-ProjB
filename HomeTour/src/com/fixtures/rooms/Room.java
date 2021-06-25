@@ -3,14 +3,23 @@ package com.fixtures.rooms;
 import java.util.ArrayList;
 
 import com.fixtures.Fixture;
+import com.fixtures.objects.Interactive;
 
 public class Room extends Fixture {
 
 	private ArrayList<Room> exits;
+	private ArrayList<Interactive> interactiveObjects;
 
 	public Room(String name, String shortDescription, String longDescription) {
 		super(name, shortDescription, longDescription);
 		this.exits = new ArrayList<Room>();
+	}
+	public void setInteractive(ArrayList<Interactive> interactiveObjects) {
+		this.interactiveObjects = interactiveObjects;
+	}
+	
+	public ArrayList<Interactive> getInteractive(){
+		return this.interactiveObjects;
 	}
 
 	public ArrayList<Room> getExits() {

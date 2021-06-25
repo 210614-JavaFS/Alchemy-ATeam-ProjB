@@ -7,7 +7,9 @@ public class StudentRoom3 extends Room
 	Matress mattress = new Matress();
 	
 	public StudentRoom3() {
-		super("StudentRoom3", "A small expensive room", "You are in a small expensive room with a blue mattress that takes up each corner of the room...yeah..welcome to California");
+
+		super("BedroomB", "A small expensive room", "You are in a small expensive room with a blue mattress that takes up each corner of the room...yeah..welcome to California");
+
 	}	
 	
 	@Override 

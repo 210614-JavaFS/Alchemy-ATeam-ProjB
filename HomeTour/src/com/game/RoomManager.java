@@ -4,10 +4,12 @@ import java.util.ArrayList;
 
 import com.fixtures.rooms.Bathroom;
 
+
 import com.fixtures.rooms.BedroomT;
 import com.fixtures.rooms.Hallway;
 import com.fixtures.rooms.Kitchen;
 import com.fixtures.rooms.LivingRoom;
+
 
 import com.fixtures.rooms.Room;
 import com.fixtures.rooms.StudentRoom3;
@@ -81,7 +83,14 @@ public class RoomManager {
 
 		livingRoomExits.add(bedroomA);
 
+
 		livingRoom.setExits(livingRoomExits);
+		
+		ArrayList<Room> bedroomAexits = new ArrayList<Room>();
+		bedroomAexits.add(livingRoom);
+		bedroomAexits.add(bathroom);
+		bedroom.setExits(bedroomAexits);
+		
 
 
 		ArrayList<Room> kitchenExits = new ArrayList<Room>();
@@ -95,6 +104,7 @@ public class RoomManager {
 
 
 		startingRoom = livingRoom;
+
 
 	}
 }

@@ -106,6 +106,7 @@ System.out.println("");
 		// Command for the moment must be wrote like "go roomName"
 		
 		switch (command[0]) {
+
 			case "go":
 			{
 				player.setCurrentRoom(player.getCurrentRoom().getExit(command[1]));

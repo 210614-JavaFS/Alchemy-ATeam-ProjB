@@ -5,17 +5,24 @@ import com.fixtures.objects.Interactive;
 
 public class LivingRoom extends Room {
 	
-	public Interactive clock = new Clock();
-	public Interactive TV= new Television();
-	public Interactive Couch= new Couch();
+
+	public Clock clock = new Clock();
+	public Television TV= new Television();
+	public Couch couch= new Couch();
 			
-	
+	@Override 
+	public String objectName() {
+		return clock.getName();
+	}
+
 
 	public Interactive getClockInteractive() {
 		return clock;
 	}
 
-	public void setClockInteractive(Interactive clock) {
+
+	public void setClockInteractive(Clock clock) {
+
 		this.clock = clock;
 	}
 	
@@ -24,20 +31,37 @@ public class LivingRoom extends Room {
 		return TV;
 	}
 
-	public void setTVInteractive(Interactive TV) {
-		this.TV = TV;
+
+	public void setTVInteractive(Television tv) {
+		this.TV = tv;
 	}
 
-	public Interactive getCouchInteractive() {
-		return Couch;
+	public Couch getCouchInteractive() {
+		return couch;
 	}
 
-	public void setCouchInteractive(Interactive couch) {
-		this.Couch = couch;
+	public void setCouchInteractive(Couch couch) {
+		this.couch = couch;
+
 	}
 
 	public LivingRoom(String name, String shortDescription, String longDescription) {
 		super(name, shortDescription, longDescription);
 	}
+
+	
+	@Override
+	public void interaction() {
+		clock.interactWith();
+	}
+	
+	public String objDesc() {
+		return clock.getLongDescription();
+	}
+		
+	public void objInteract() {
+		clock.interactWith();
+	}
+
 		
 }

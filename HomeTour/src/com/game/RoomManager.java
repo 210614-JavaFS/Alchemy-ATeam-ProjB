@@ -4,7 +4,10 @@ import java.util.ArrayList;
 
 import com.fixtures.rooms.Bathroom;
 
+import com.fixtures.rooms.BedroomT;
+import com.fixtures.rooms.Hallway;
 import com.fixtures.rooms.Kitchen;
+import com.fixtures.rooms.LivingRoom;
 
 import com.fixtures.rooms.Room;
 import com.fixtures.rooms.StudentRoom3;
@@ -19,11 +22,44 @@ public class RoomManager {
 
 		// Creations of all the rooms of the game and add their respective exits.
 
+<<<<<<< HEAD
 		Room hallway = new Room("Hallway", "Exits:\nEast: Kitchen\nNorth: Bedroom\nSouth: Living Room\nWest: Bathroom",
 				"Long Description of Hallway");
 		Room livingRoom = new Room("Livingroom",
 				"Items: \nwall clock\nTelevision\nCouch\n\nExits:\nEast: An ancient clock is hanging on the wall\nNorth: ABC news are broadcasting on Television\nSouth: Comfortable Couch with coffee table\nWest: Exits to Hallway",
 				"Long Description of Living room");
+=======
+
+		BedroomT bedroomA = new BedroomT();
+		Hallway hallway = new Hallway("Hallway", 
+				"Hallway", 
+				"A short hallway");
+		LivingRoom livingRoom = new LivingRoom("Livingroom",
+				"A cozy room for all of your roommates can chill.",
+				"On the East: You see an ancient clock is hanging on the wall\nOn the North: You see ABC news are broadcasting on Television\nOn the South: A Comfortable Couch with coffee table\nOn the West: Exits to Hallway");
+
+		
+		
+		rooms.add(hallway);
+		rooms.add(livingRoom);
+		
+		startingRoom = hallway;
+		
+		ArrayList<Room> hallwayExits = new ArrayList<Room>();
+		ArrayList<Room> livingRoomExits = new ArrayList<Room>();
+
+		ArrayList<Room> bedroomAExits = new ArrayList<Room>();
+		
+		bedroomAExits.add(livingRoom);
+		bedroomA.setExits(bedroomAExits);
+
+		
+		hallwayExits.add(livingRoom);
+		
+		
+		hallway.setExits(hallwayExits);
+		livingRoom.setExits(livingRoomExits);
+>>>>>>> origin/main
 
 		ArrayList<String> stove = new ArrayList<String>();
 		stove.add("Pot");
@@ -43,6 +79,21 @@ public class RoomManager {
 		ArrayList<Room> studentRoom3Exits = new ArrayList<Room>();
 		studentRoom3Exits.add(hallway);
 		studentRoom3.setExits(studentRoom3Exits);
+<<<<<<< HEAD
+=======
+	
+
+		livingRoomExits.add(bathroom);
+		livingRoomExits.add(hallway);
+		livingRoomExits.add(studentRoom3);
+		livingRoomExits.add(kitchen);
+		livingRoomExits.add(roomB);
+
+		livingRoomExits.add(bedroomA);
+
+		livingRoom.setExits(livingRoomExits);
+
+>>>>>>> origin/main
 
 		ArrayList<Room> kitchenExits = new ArrayList<Room>();
 		kitchenExits.add(hallway);

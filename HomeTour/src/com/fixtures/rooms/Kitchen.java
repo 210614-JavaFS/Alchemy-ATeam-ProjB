@@ -27,6 +27,7 @@ public class Kitchen extends Room{
 	public Fridge getFridge() {
 		return this.fridge;
 	}
+
 	
 	@Override 
 	public String objectName() {
@@ -45,4 +46,5 @@ public class Kitchen extends Room{
 	public void objInteract() {
 		stove.interactWith();
 	}
+
 }

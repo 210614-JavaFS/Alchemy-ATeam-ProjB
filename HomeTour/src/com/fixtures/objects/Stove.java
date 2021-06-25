@@ -19,7 +19,9 @@ public class Stove extends Fixture implements Interactive {
 		
 	}
 	public Stove(ArrayList<String> stoveTop) {
+
 		super("Stove", "This is a stove.", "This is a hot stove");
+
 		this.stoveTop = stoveTop;
 		this.isTheStoveEmpty();
 	}

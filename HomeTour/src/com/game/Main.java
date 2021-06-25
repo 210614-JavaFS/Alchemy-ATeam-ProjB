@@ -13,6 +13,7 @@ public class Main {
 
 		manager = new RoomManager();
 
+
 System.out.println("		HHHHHHHHH     HHHHHHHHH                                                                  TTTTTTTTTTTTTTTTTTTTTTT                    ");                               
 System.out.println("		H:::::::H     H:::::::H                                                                  T:::::::::::::::::::::T                        ");                           
 System.out.println("		H:::::::H     H:::::::H                                                                  T:::::::::::::::::::::T                           ");                        
@@ -30,6 +31,8 @@ System.out.println("		H:::::::H     H:::::::Ho:::::::::::::::om::::m   m::::m   
 System.out.println("		H:::::::H     H:::::::H oo:::::::::::oo m::::m   m::::m   m::::m  ee:::::::::::::e             T:::::::::T    oo:::::::::::oo   uu::::::::uu:::ur:::::r            ");
 System.out.println("		HHHHHHHHH     HHHHHHHHH   ooooooooooo   mmmmmm   mmmmmm   mmmmmm    eeeeeeeeeeeeee             TTTTTTTTTTT      ooooooooooo       uuuuuuuu  uuuurrrrrrr            ");
 System.out.println("");	                                                                                                                                                                
+
+		
 				
 		RoomManager manager = new RoomManager();
 
@@ -38,6 +41,7 @@ System.out.println("");
 
 		// While condition will change. set to true during development
 		while (true) {
+
 			
 			System.out.println("===========================================================");
 			System.out.println("You're in the "  + player.getCurrentRoom().getName());
@@ -54,7 +58,7 @@ System.out.println("");
 			System.out.println("===========================================================");
 			System.out.println("List of Exits:");
 			System.out.println("===========================================================");
-			
+
 			for(int j = 0; j<player.getCurrentRoom().getExits().size(); j++)
 			{
 				System.out.println(player.getCurrentRoom().getExits().get(j).getName());
@@ -66,14 +70,17 @@ System.out.println("");
 	}
 
 	private static void printRoom(Player player) {
+
 		System.out.println("===========================================================");
 		System.out.println("Current Room: "+player.getCurrentRoom().getName()+ "");
 		System.out.println("===========================================================");
+
 		System.out.println();
 		System.out.println(player.getCurrentRoom().getLongDescription());
 		System.out.println();
 		System.out.println(player.getCurrentRoom().getShortDescription());
 		System.out.println();
+
 	}
 
 	private static String[] collectInput() {

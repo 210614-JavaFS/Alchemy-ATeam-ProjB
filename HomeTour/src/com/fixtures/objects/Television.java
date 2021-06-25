@@ -6,7 +6,7 @@ public class Television extends Fixture implements Interactive{
 
 	@Override
 	public void interactWith() {
-		 System.out.println("On TV, ABC news are Broadcasting");
+		 System.out.println("On TV, abc news are Broadcasting");
 		this.setLongDescription("Set News");		
 	}
 	 public Television()

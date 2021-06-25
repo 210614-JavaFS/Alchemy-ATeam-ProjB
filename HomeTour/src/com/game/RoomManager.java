@@ -25,6 +25,7 @@ public class RoomManager {
 		// Creations of all the rooms of the game and add their respective exits.
 
 
+
 		BedroomT bedroomA = new BedroomT();
 		Hallway hallway = new Hallway("Hallway", 
 				"Hallway", 
@@ -32,6 +33,7 @@ public class RoomManager {
 		LivingRoom livingRoom = new LivingRoom("Livingroom",
 				"A cozy room for all of your roommates can chill.",
 				"On the East: You see an ancient clock is hanging on the wall\nOn the North: You see ABC news are broadcasting on Television\nOn the South: A Comfortable Couch with coffee table\nOn the West: Exits to Hallway");
+
 
 		
 		
@@ -73,6 +75,7 @@ public class RoomManager {
 		ArrayList<Room> studentRoom3Exits = new ArrayList<Room>();
 		studentRoom3Exits.add(hallway);
 		studentRoom3.setExits(studentRoom3Exits);
+
 	
 
 		livingRoomExits.add(bathroom);
@@ -90,6 +93,7 @@ public class RoomManager {
 		bedroomAexits.add(livingRoom);
 		bedroomAexits.add(bathroom);
 		bedroom.setExits(bedroomAexits);
+
 		
 
 
@@ -101,6 +105,7 @@ public class RoomManager {
 		ArrayList<Room> roomBExits = new ArrayList<Room>();
 		roomBExits.add(hallway);
 		roomB.setExits(roomBExits);
+
 
 
 		startingRoom = livingRoom;
